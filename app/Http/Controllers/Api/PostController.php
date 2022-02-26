@@ -42,6 +42,7 @@ class PostController extends Controller
         $post->description = $request->description;
         $post->image = $request->image;
         $post->user()->associate(User::findOrFail($request->user_id));
+        $post->ok = $request->ok;
         $post->save();
 
         return response()->json($post, 201);
@@ -79,6 +80,7 @@ class PostController extends Controller
         $post->description = $request->description;
         $post->image = $request->image;
         $post->user()->associate(User::findOrFail($request->user_id));
+        $post->ok = $request->ok;
         $post->save();
 
         return response()->json($post, 201);
