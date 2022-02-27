@@ -72,7 +72,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     //Asociada a una operación PUT, para actualizar los datos del registro asociado a un identificador específico
-    public function update(PostRequest $request, Post $post)
+    public function update(Request $request, Post $post)
     {
         //
         $post->id = $request->id;
