@@ -35,8 +35,8 @@ class CommentController extends Controller
         $comments = new Comment();
         $comments->content = $request->content;
         $comments->ranking = $request->ranking;
-        $comments->user_id = $request->user_id;
-        $comments->user()->associate(Post::findOrFail($request->user_id));
+        $comments->user_name = $request->user_name;
+        $comments->user()->associate(User::findOrFail($request->user_id));
         $comments->post()->associate(Post::findOrFail($request->post_id));
         $comments->save();
 
@@ -67,7 +67,7 @@ class CommentController extends Controller
         //
         $comment->content = $request->content;
         $comment->ranking = $request->ranking;
-        $comments->user_id = $request->user_id;
+        $comments->user_name = $request->user_name;
         $comment->save();
 
         return response()->json($comment,201);
