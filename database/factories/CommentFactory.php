@@ -16,7 +16,8 @@ class CommentFactory extends Factory
         return [
             //
             'content' => $this->faker->sentence(),
-            'ranking' => $this->faker->numberBetween(1,5)
+            'ranking' => $this->faker->numberBetween(1,5),
+            'user_name' => $this->faker->name
         ];
     }
 }
