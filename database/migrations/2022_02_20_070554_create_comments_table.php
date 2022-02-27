@@ -18,6 +18,7 @@ class CreateCommentsTable extends Migration
             $table->text('content');
             $table->integer('ranking');
             $table->timestamps();
+            $table->string('user_name');
         });
     }
 
