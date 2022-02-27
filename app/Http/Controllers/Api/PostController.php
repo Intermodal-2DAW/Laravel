@@ -33,7 +33,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     //Asociada a una operación POST, para almacenar los datos que llegan a la solicitud
-    public function store(PostRequest $request)
+    public function store(Request $request)
     {
         //
         $post = new Post();
